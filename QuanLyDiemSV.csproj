@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBBB10D2-1116-451A-BF36-5AA0BB00B861}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyDiemSV</RootNamespace>
+    <AssemblyName>QuanLyDiemSV</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.8.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.0.8\lib\net48\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbConnect.cs" />
+    <Compile Include="userControl\DGVPrinter.cs" />
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemHP.Designer.cs">
+      <DependentUpon>frmThemHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemLop.Designer.cs">
+      <DependentUpon>frmThemLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemSV.Designer.cs">
+      <DependentUpon>frmThemSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userControl\ucDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucDiem.Designer.cs">
+      <DependentUpon>ucDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucHocPhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucHocPhan.Designer.cs">
+      <DependentUpon>ucHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucLop.Designer.cs">
+      <DependentUpon>ucLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucQuanLy.Designer.cs">
+      <DependentUpon>ucQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSinhVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSinhVien.Designer.cs">
+      <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemHP.resx">
+      <DependentUpon>frmThemHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemLop.resx">
+      <DependentUpon>frmThemLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemSV.resx">
+      <DependentUpon>frmThemSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="userControl\ucDiem.resx">
+      <DependentUpon>ucDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucHocPhan.resx">
+      <DependentUpon>ucHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucLop.resx">
+      <DependentUpon>ucLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucQuanLy.resx">
+      <DependentUpon>ucQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSinhVien.resx">
+      <DependentUpon>ucSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idea-bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whistle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mortarboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\easel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diploma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elearning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\367011402_2069594953387471_2614062944507895863_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Replay-3_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Book_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-button-white-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-3-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-login-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireman-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-3-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-as-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-3-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doraemon-stand-by-me-doraemon-23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace-goody-stand-by-me-doraemon-3.82.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noby-nobi-stand-by-me-doraemon-0.2_thumb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sue-morris-stand-by-me-doraemon-91.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sneech-stand-by-me-doraemon-5.75.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\373349045_322426240258896_231748014333333298_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3e84bf8e1bcbfa828da809e1e961be15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lecture-room.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mortarboard.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
