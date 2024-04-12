@@ -5,6 +5,7 @@
 
 ### SCREENSHOTS
 
+
 #### Login Screen
 ![image](https://github.com/muab0m45/QuanLyDiemSinhVienCS/assets/29012156/40ad9df9-892c-453a-93de-0ef7481fe685)
 #### Student Management
@@ -23,5 +24,7 @@
 ![image](https://github.com/muab0m45/QuanLyDiemSinhVienCS/assets/29012156/c7715faf-e895-49d2-8816-73723098ad1e)
 #### User Account Management
 ![image](https://github.com/muab0m45/QuanLyDiemSinhVienCS/assets/29012156/dfa68495-c1ff-41af-b754-3b2d85cba378)
+
+[VuChiManh_BaoCaoTong.docx](https://github.com/muab0m45/QuanLyDiemSinhVienCS/files/14955214/VuChiManh_BaoCaoTong.docx)
 
 
